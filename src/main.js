@@ -2,6 +2,17 @@ import Vue from 'vue'
 import App from './App.vue'
 import router from './router'
 import store from './store'
+import bulma from './assets/sass/bulma.scss'
+import VueLazyload from 'vue-lazyload'
+ 
+Vue.use(VueLazyload, {
+  preLoad: 1.3,
+  error: 'static/error.png',
+  loading: 'static/Loading_icon.gif',
+  attempt: 1
+})
+
+Vue.use(bulma)
 
 Vue.config.productionTip = false
 

@@ -1,5 +1,4 @@
 export default {
-  modules: {},
   state: {
   },
   mutations: {

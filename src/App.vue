@@ -1,10 +1,19 @@
 <template>
   <div id="app">
-    <h1>Welcome to our shop!</h1>
+    <h1>{{title}}</h1>
     <router-view/>
   </div>
 </template>
 
+<script>
+export default {
+  data() {
+    return {
+      title: "Welcome to our shop!"
+    }
+  },
+}
+</script>
 <style>
 #app {
   font-family: Avenir, Helvetica, Arial, sans-serif;
