@@ -10,7 +10,11 @@ Vue.use(VueRouter)
     name: 'Home',
     component: Home
   },
-  
+  {
+    path: '/checkout',
+    name: 'Checkout',
+    component: () => import('../views/Checkout.vue')
+  }
 ]
 
 const router = new VueRouter({

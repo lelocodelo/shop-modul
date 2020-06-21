@@ -22,7 +22,7 @@
         <span class="is-pulled-right" id="totalPrice">{{totalPrice}} €</span>
       </p>
       <p>
-        <button class="has-text-centered button is-success is-small" id="checkoutBtn">Checkout</button>
+        <button class="has-text-centered button is-success is-small" id="checkoutBtn" @click="redirectToCheckout">Checkout</button>
       </p>
     </div>
   </div>
@@ -38,7 +38,12 @@ export default {
       }
     }),
     ...mapGetters("basket", ["totalPrice"])
-  }
+  },
+  methods: {
+    redirectToCheckout() {
+      this.$router.push('checkout')
+    }
+  },
 };
 </script>
 
